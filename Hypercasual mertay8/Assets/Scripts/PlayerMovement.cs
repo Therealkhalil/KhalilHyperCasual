@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float xPos = (Input.mousePosition.x - halfScreen) / halfScreen;
         float finalPosx = Mathf.Clamp(xPos * limitvalue,-limitvalue,limitvalue);
 
-        TransformPlayer.localPosition = new Vector3(finalPosx, 1, 0); 
+        TransformPlayer.localPosition = new Vector3(finalPosx, 0, 0); 
 
         
     }
