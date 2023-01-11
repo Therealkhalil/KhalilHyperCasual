@@ -10,6 +10,8 @@ namespace PathCreation.Examples
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
         float distanceTravelled;
+        bool clicked = false;
+        [SerializeField] private Animator animChar;
 
         void Start() {
             if (pathCreator != null)
@@ -21,8 +23,10 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if (pathCreator != null)
+            if (Input.GetMouseButton(0) || clicked)
             {
+                clicked = true;
+                animChar.SetBool("is_run", true);
                 distanceTravelled += speed * Time.deltaTime;
                 transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
                 transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
