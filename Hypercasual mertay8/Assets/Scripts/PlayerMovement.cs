@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float limitvalue;
     [SerializeField] private Transform TransformPlayer;
     [SerializeField] private float speedHorizontal;
+
     private Touch touchPos;
+    
 
     // Update is called once per frame
     void Update()
@@ -17,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
         {
             touchPos = Input.GetTouch(0);
             MovePlayer();
-        }
-
+        }   
     }
 
 
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         float moveX = finalPosx - TransformPlayer.localPosition.x;
         TransformPlayer.localPosition += new Vector3(moveX * speedHorizontal * Time.deltaTime, 0, 0);
     }
+   
 }
 
 
