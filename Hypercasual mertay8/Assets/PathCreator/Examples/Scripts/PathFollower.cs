@@ -23,7 +23,7 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if (Input.GetMouseButton(0) || clicked)
+            if (Input.touchCount > 0 || clicked)
             {
                 clicked = true;
                 animChar.SetBool("is_run", true);
