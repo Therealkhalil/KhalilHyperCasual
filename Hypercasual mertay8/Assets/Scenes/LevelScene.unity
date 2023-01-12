@@ -1607,8 +1607,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9685177, z: 0.94091934}
-  m_Center: {x: 0, y: 0.015740367, z: 0.029541438}
+  m_Size: {x: 0.40282208, y: 0.9685177, z: 0.94091934}
+  m_Center: {x: -0.07215056, y: 0.015740367, z: 0.029541438}
 --- !u!33 &1437556716
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f86258da9206f49bea35bd34c6455c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limitvalue: 1.48
+  limitvalue: 1
   TransformPlayer: {fileID: 1714654672}
   speedHorizontal: 4
 --- !u!1 &1967707751
