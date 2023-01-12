@@ -6,11 +6,12 @@ public class CharCheck : MonoBehaviour
 {
     public bool is_dead = false;
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "lava")
         {
             is_dead = true;
+            Debug.Log("dead");
         }
     }
 

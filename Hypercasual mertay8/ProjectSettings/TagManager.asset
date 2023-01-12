@@ -7,6 +7,7 @@ TagManager:
   - booster
   - lava
   - Character
+  - barel
   layers:
   - Default
   - TransparentFX
