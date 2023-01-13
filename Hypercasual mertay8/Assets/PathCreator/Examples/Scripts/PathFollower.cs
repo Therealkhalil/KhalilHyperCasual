@@ -12,6 +12,7 @@ namespace PathCreation.Examples
         float distanceTravelled;
         bool clicked = false;
         [SerializeField] private Animator animChar;
+        public CharCheck _charscp;
 
         void Start() {
             if (pathCreator != null)
@@ -23,7 +24,7 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if (Input.touchCount > 0 || clicked)
+            if ((Input.touchCount > 0 || clicked) && _charscp.is_dead == false)
             {
                 clicked = true;
                 animChar.SetBool("is_run", true);
