@@ -24,7 +24,7 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if ((Input.touchCount > 0 || clicked) && _charscp.is_dead == false)
+            if ((Input.touchCount > 0 || clicked) && _charscp.is_dead == false && _charscp.is_win == false)
             {
                 clicked = true;
                 animChar.SetBool("is_run", true);

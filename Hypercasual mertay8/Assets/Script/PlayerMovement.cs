@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
             MovePlayer();
         }   
     }
-
-
     private void MovePlayer()
     {
         //Calculate X position and modify it

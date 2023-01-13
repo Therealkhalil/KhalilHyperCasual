@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CharCheck : MonoBehaviour
 {
-    public bool is_dead = false;
-    [SerializeField] private Animator deadanim;
+    public bool is_dead = false,is_win = false;
+    [SerializeField] private Animator chanim;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "lava")
         {
             is_dead = true;
-            deadanim.SetBool("is_dead", is_dead);
+            chanim.SetBool("is_dead", is_dead);
+        }
+        if (other.gameObject.tag == "Finish")
+        {
+            is_win = true;
+            chanim.SetBool("is_win", is_win);
         }
     }
 
