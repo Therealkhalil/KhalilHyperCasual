@@ -5,15 +5,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class CharCheck : MonoBehaviour
 {
-    [SerializeField] private GameObject camera; 
     public bool is_dead = false,is_win = false;
     [SerializeField] private Animator chanim;
-    private Transform target;
 
-    private void Update()
-    {
-       
-    }
 
     private void OnTriggerEnter(Collider other)
     {
